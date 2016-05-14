@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USGS Configuration</title>
+        <style type="text/css">body{margin:1em auto;max-width:40em;padding:0 .62em;font:1.2em/1.62em sans-serif;}h1,h2,h3{line-height:1.2em;}</style>
+    </head>
+    <body>
+        <h1>USGS Data for Pebble Configuration</h1>
+
+        <!-- Inputs for temperature units -->
+        <h2>Units</h2>
+        <h3>Select the units to be used for displaying temperature values.</h3>
+        <label for="cels">Celsius</label>
+        <input name="units" id="cels" type="radio" value="1"></input>
+        <label for="fahr">Fahrenheit</label>
+        <input name="units" id="fahr" type="radio" value="0"></input>
+
+        <!-- Inputs for USGS site codes -->
+        <h2>Site Numbers</h2>
+        <h3>Add site numbers from which to query data.<br>Click "add" button to additional sites.<br>Sites can be found <a href="http://maps.waterdata.usgs.gov/mapper/index.html">here</a>.</h3>
+        <div id="site_codes">
+        </div>
+
+        <!-- Buttons to add new site input and to submit configuration -->
+        <input id="add_button" type="button" value="Add Site" onclick="add_site()">
+        <input id="submit_button" type="button" value="Save">
+    </body>
+    <script src="config.js"></script>
+</html>
+
